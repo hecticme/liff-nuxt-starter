@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-08',
   runtimeConfig: {
     public: {
-      liffId: process.env.NUXT_LIFF_ID,
+      liffId: process.env.LIFF_ID,
     },
   },
 })
