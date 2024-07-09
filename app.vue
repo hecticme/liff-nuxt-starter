@@ -80,6 +80,23 @@ onMounted(() => {
           <span>{{ value }}</span>
         </li>
       </ul>
+
+      <div class="profile-container">
+        <h3 class="profile-heading">User Profile</h3>
+
+        <p class="profile-id">
+          userIdToken: {{ userProfile.idToken || '...?' }}
+        </p>
+
+        <ul v-if="userProfile.profile" class="profile-details">
+          <li
+          v-for="(value, property, index) in userProfile.profile"
+          :key="index"
+          >
+            {{ `${property}: ${value}` }}
+          </li>
+        </ul>
+      </div>
     </main>
   </div>
 </template>
