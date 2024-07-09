@@ -75,6 +75,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 25rem;
 }
 
 .detail {
