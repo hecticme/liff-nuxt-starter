@@ -44,6 +44,12 @@ onMounted(() => {
 <template>
   <div id="app">
     <main class="main-container">
+      <h1 class="page-heading">
+        <span style="color: #4ade80">LIFF</span>
+        +
+        <span style="color: #34d399">Nuxt</span>
+      </h1>
+
       <ul class="details">
         <li
           v-for="(value, property, index) in liffAppInformation"
@@ -75,6 +81,14 @@ onMounted(() => {
   background-color: white;
   padding-inline: 1rem;
   border-inline: 1px solid #e5e7eb;
+}
+
+.page-heading {
+  margin-inline: auto;
+  text-align: center;
+  margin-block-start: 2rem;
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .details {
