@@ -181,6 +181,7 @@ onMounted(() => {
 .section-container {
   background-color: #f9f9f9;
   padding: 1rem;
+  margin-block-start: 0.75rem;
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
   overflow: auto;
@@ -189,6 +190,7 @@ onMounted(() => {
 .section-heading {
   font-size: 1.75rem;
   font-weight: 600;
+  margin-block-end: 0.5rem;
 }
 
 .profile-id {
