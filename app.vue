@@ -107,14 +107,20 @@ onMounted(() => {
         </ul>
       </div>
 
-      <ul v-if="searchParams">
-        <li
-          v-for="(value, index) of searchParams.entries()"
-          :key="index"
-        >
-          {{ value }}
-        </li>
-      </ul>
+      <div class="section-container">
+        <h3 class="section-heading">
+          Search Params
+        </h3>
+
+        <ul v-if="searchParams">
+          <li
+            v-for="(value, index) of searchParams.entries()"
+            :key="index"
+          >
+            {{ value }}
+          </li>
+        </ul>
+      </div>
     </main>
   </div>
 </template>
