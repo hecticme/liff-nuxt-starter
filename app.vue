@@ -28,6 +28,8 @@ useHead({
 
 const { $liffInit } = useNuxtApp()
 
+const searchParams = ref<URLSearchParams | null>(null)
+
 const liffAppInformation = reactive({
   version: '',
   os: '',
@@ -42,6 +44,8 @@ const userProfile = reactive<{
 })
 
 onMounted(() => {
+  searchParams.value = new URLSearchParams(window.location.search)
+
   $liffInit
     .then(async () => {
       Object.assign(liffAppInformation, {
@@ -102,6 +106,15 @@ onMounted(() => {
           </li>
         </ul>
       </div>
+
+      <ul v-if="searchParams">
+        <li
+          v-for="(value, index) of searchParams.entries()"
+          :key="index"
+        >
+          {{ value }}
+        </li>
+      </ul>
     </main>
   </div>
 </template>
