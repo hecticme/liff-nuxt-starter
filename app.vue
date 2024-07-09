@@ -85,8 +85,8 @@ onMounted(() => {
         </li>
       </ul>
 
-      <div class="profile-container">
-        <h3 class="profile-heading">
+      <div class="section-container">
+        <h3 class="section-heading">
           User Profile
         </h3>
 
@@ -172,7 +172,7 @@ onMounted(() => {
   font-style: italic;
 }
 
-.profile-container {
+.section-container {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -180,7 +180,7 @@ onMounted(() => {
   overflow: auto;
 }
 
-.profile-heading {
+.section-heading {
   font-size: 1.75rem;
   font-weight: 600;
 }
