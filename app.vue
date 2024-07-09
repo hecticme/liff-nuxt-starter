@@ -9,6 +9,21 @@ useHead({
       content: 'A LIFF web app built with Nuxt.',
     },
   ],
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com',
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: '',
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap',
+    },
+  ],
 })
 
 const { $liffInit } = useNuxtApp()
@@ -72,6 +87,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   background-color: #f9f9f9;
+  font-family: 'Space Grotesk', monospace;
 }
 
 .main-container {
