@@ -153,4 +153,27 @@ onMounted(() => {
   font-weight: 600;
   font-style: italic;
 }
+
+.profile-container {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb
+}
+
+.profile-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.profile-id {
+  margin-block-start: 0.75rem;
+}
+
+.profile-details {
+  margin-block-start: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 </style>
