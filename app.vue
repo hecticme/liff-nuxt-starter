@@ -43,17 +43,19 @@ onMounted(() => {
 
 <template>
   <div id="app">
-    <ul class="details">
-      <li
-        v-for="(value, property, index) in liffAppInformation"
-        :key="index"
-        class="detail"
-      >
-        <span class="detail-label">{{ property }}: </span>
+    <main class="main-container">
+      <ul class="details">
+        <li
+          v-for="(value, property, index) in liffAppInformation"
+          :key="index"
+          class="detail"
+        >
+          <span class="detail-label">{{ property }}: </span>
 
-        <span>{{ value }}</span>
-      </li>
-    </ul>
+          <span>{{ value }}</span>
+        </li>
+      </ul>
+    </main>
   </div>
 </template>
 
@@ -63,6 +65,16 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 80rem;
+  flex: 1;
+  background-color: white;
+  margin-inline: 0.5rem;
+  padding-inline: 1rem;
+  border-inline: 1px solid #e5e7eb;
 }
 
 .details {
