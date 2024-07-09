@@ -65,6 +65,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f9f9f9;
 }
 
 .main-container {
