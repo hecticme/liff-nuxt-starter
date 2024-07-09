@@ -31,8 +31,14 @@ const { $liffInit } = useNuxtApp()
 const liffAppInformation = reactive({
   version: '',
   os: '',
-  user: '',
-  profile: '',
+})
+
+const userProfile = reactive<{
+  idToken: string
+  profile: Record<string, null> | null
+}>({
+  idToken: '',
+  profile: null,
 })
 
 onMounted(() => {
@@ -41,13 +47,11 @@ onMounted(() => {
       Object.assign(liffAppInformation, {
         version: liff.getVersion(),
         os: liff.getOS(),
-        user: liff.getIDToken(),
       })
 
-      const liffProfile = await liff.getProfile()
-
-      Object.assign(liffAppInformation, {
-        profile: liffProfile,
+      Object.assign(userProfile, {
+        idToken: liff.getIDToken(),
+        profile: await liff.getProfile(),
       })
     })
     .catch(error => {
