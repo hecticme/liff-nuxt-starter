@@ -49,7 +49,7 @@ onMounted(() => {
         :key="index"
         class="detail"
       >
-        <span>{{ property }}: </span>
+        <span class="detail-label">{{ property }}: </span>
 
         <span>{{ value }}</span>
       </li>
@@ -86,5 +86,10 @@ onMounted(() => {
 
 .detail:is(:focus-visible, :hover) {
   background-color: #e5e7eb;
+}
+
+.detail-label {
+  font-weight: 600;
+  font-style: italic;
 }
 </style>
