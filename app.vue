@@ -31,6 +31,7 @@ const { $liffInit } = useNuxtApp()
 const liffAppInformation = reactive({
   version: '',
   os: '',
+  query: '',
 })
 
 const userProfile = reactive<{
@@ -47,6 +48,7 @@ onMounted(() => {
       Object.assign(liffAppInformation, {
         version: liff.getVersion(),
         os: liff.getOS(),
+        query: liff.state,
       })
 
       Object.assign(userProfile, {
