@@ -69,11 +69,10 @@ onMounted(() => {
 }
 
 .main-container {
-  width: 100%;
+  width: calc(100% - 2rem);
   max-width: 80rem;
   flex: 1;
   background-color: white;
-  margin-inline: 0.5rem;
   padding-inline: 1rem;
   border-inline: 1px solid #e5e7eb;
 }
