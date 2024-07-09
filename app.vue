@@ -79,16 +79,12 @@ onMounted(() => {
 
 .details {
   list-style: none;
-  background-color: #f2f3f4;
-  border: 0.0625rem solid #d3d3d3;
   margin-block-start: 4rem;
   padding: 1rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 80%;
-  max-width: 35rem;
 }
 
 .detail {
