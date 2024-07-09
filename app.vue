@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import liff from '@line/liff'
+
 useHead({
   title: 'LIFF + Nuxt',
   meta: [
@@ -8,13 +10,48 @@ useHead({
     },
   ],
 })
+
+const { $liffInit } = useNuxtApp()
+
+const liffAppInformation = reactive({
+  version: '',
+  os: '',
+  user: '',
+  profile: '',
+})
+
+onMounted(() => {
+  $liffInit
+    .then(async () => {
+      Object.assign(liffAppInformation, {
+        version: liff.getVersion(),
+        os: liff.getOS(),
+        user: liff.getIDToken(),
+      })
+
+      const liffProfile = await liff.getProfile()
+
+      Object.assign(liffAppInformation, {
+        profile: liffProfile,
+      })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
 </script>
 
 <template>
   <div id="app">
     <ul class="details">
-      <li class="detail">
-        Information 01
+      <li
+        v-for="(value, property, index) in liffAppInformation"
+        :key="index"
+        class="detail"
+      >
+        <span>{{ property }}: </span>
+
+        <span>{{ value }}</span>
       </li>
     </ul>
   </div>
