@@ -163,7 +163,7 @@ onMounted(() => {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #e5e7eb
+  border: 1px solid #e5e7eb;
 }
 
 .profile-heading {
