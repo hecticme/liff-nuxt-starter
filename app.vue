@@ -124,10 +124,10 @@ onMounted(() => {
 
       <div class="section-container">
         <h3 class="section-heading">
-          `liff.state`
+          Referral Code
         </h3>
 
-        <p>{{ searchParams?.get('liff.state') ?? 'Unavailable' }}</p>
+        <p>{{ searchParams?.get('code') ?? 'Could not find referral code.' }}</p>
       </div>
     </main>
   </div>
