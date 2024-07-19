@@ -45,6 +45,7 @@ const userProfile = reactive<{
 
 onMounted(() => {
   searchParams.value = new URLSearchParams(window.location.search)
+  const referralCode = searchParams.value.get('code')
 
   $liffInit
     .then(async () => {
@@ -57,6 +58,9 @@ onMounted(() => {
         idToken: liff.getIDToken(),
         profile: await liff.getProfile(),
       })
+    })
+    .then(() => {
+      location.assign(`https://www.google.com/search?q=${referralCode}`)
     })
     .catch(error => {
       console.log(error)
