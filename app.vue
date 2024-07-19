@@ -121,6 +121,14 @@ onMounted(() => {
           </li>
         </ul>
       </div>
+
+      <div class="section-container">
+        <h3 class="section-heading">
+          `liff.state`
+        </h3>
+
+        <p>{{ searchParams?.get('liff.state') ?? 'Unavailable' }}</p>
+      </div>
     </main>
   </div>
 </template>
